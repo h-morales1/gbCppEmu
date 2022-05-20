@@ -11,7 +11,7 @@ all: emu
 
 # The 'all' rule lists the targets of interest... that have their own recipies:
 emu: main.cc libs/cpu.cc libs/mmu.cc libs/ram.cc include/cpu.h include/mmu.h include/ram.h
-	g++ $(CXXFLAGS) -o emu main.cc /home/holzel/Code/cpp/GB/libs/cpu.cc /home/holzel/Code/cpp/GB/libs/mmu.cc /home/holzel/Code/cpp/GB/libs/ram.cc
+	g++ $(CXXFLAGS) -o emu main.cc libs/mmu.cc libs/ram.cc libs/cpu.cc
 
 
 # A 'phony' target named clean is used to remove all files that the Makefile
